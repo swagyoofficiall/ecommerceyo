@@ -89,8 +89,7 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/"
           >
-            {' '}
-            HOME{' '}
+            HOME
           </NavLink>
           <NavLink
             onClick={() => {
@@ -99,8 +98,7 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/collection"
           >
-            {' '}
-            COLLECTION{' '}
+            COLLECTION
           </NavLink>
           <NavLink
             onClick={() => {
@@ -109,8 +107,7 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/about"
           >
-            {' '}
-            ABOUT{' '}
+            ABOUT
           </NavLink>
           <NavLink
             onClick={() => {
@@ -119,8 +116,7 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/contact"
           >
-            {' '}
-            CONTACT{' '}
+            CONTACT
           </NavLink>
         </div>
       </div>

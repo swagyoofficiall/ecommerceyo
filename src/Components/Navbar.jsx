@@ -13,6 +13,7 @@ const Navbar = () => {
         <img src={assets.logo} alt="logo" className="w-36" />
       </Link>
 
+      {/* Desktop Menu */}
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
@@ -32,27 +33,27 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
+      {/* Right Side Icons */}
       <div className="flex items-center gap-6">
         <img
-          onClick={() => {
-            setShowSearch(true);
-          }}
+          onClick={() => setShowSearch(true)}
           src={assets.search_icon}
-          alt=""
-          className="w-5 cursor-pointer "
+          alt="search"
+          className="w-5 cursor-pointer"
         />
+
         <div className="group relative">
           <Link to="/login">
             <img
               src={assets.profile_icon}
-              alt=""
+              alt="profile"
               className="w-5 cursor-pointer"
             />
           </Link>
         </div>
 
-        <Link to="/cart" className="relative ">
-          <img src={assets.cart_icon} alt="" className="w-5 min-w-5 " />
+        <Link to="/cart" className="relative">
+          <img src={assets.cart_icon} alt="cart" className="w-5 min-w-5" />
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
             {getCartCount()}
           </p>
@@ -60,9 +61,9 @@ const Navbar = () => {
 
         <img
           src={assets.menu_icon}
-          alt=""
-          className="w-5 cursor-pointer sm:hidden "
-          onClick={() => setVisible(!visible)} //visibility toggle (true/false))
+          alt="menu"
+          className="w-5 cursor-pointer sm:hidden"
+          onClick={() => setVisible(!visible)}
         />
       </div>
 
@@ -71,51 +72,25 @@ const Navbar = () => {
         className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white ease-in duration-300
              ${visible ? 'w-full' : 'w-0'}`}
       >
-        <div className="flex flex-col text-gray-600 ">
+        <div className="flex flex-col text-gray-600">
           <div
-            onClick={() => {
-              setVisible(false);
-            }}
+            onClick={() => setVisible(false)}
             className="flex items-center gap-4 p-3 cursor-pointer"
           >
-            <img src={assets.dropdown_icon} alt="" className="h-4 rotate-180" />
+            <img src={assets.dropdown_icon} alt="back" className="h-4 rotate-180" />
             <p className="font-semibold">Back</p>
           </div>
 
-          <NavLink
-            onClick={() => {
-              setVisible(false);
-            }}
-            className="py-2 pl-6 border"
-            to="/"
-          >
+          <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/">
             HOME
           </NavLink>
-          <NavLink
-            onClick={() => {
-              setVisible(false);
-            }}
-            className="py-2 pl-6 border"
-            to="/collection"
-          >
+          <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/collection">
             COLLECTION
           </NavLink>
-          <NavLink
-            onClick={() => {
-              setVisible(false);
-            }}
-            className="py-2 pl-6 border"
-            to="/about"
-          >
+          <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/about">
             ABOUT
           </NavLink>
-          <NavLink
-            onClick={() => {
-              setVisible(false);
-            }}
-            className="py-2 pl-6 border"
-            to="/contact"
-          >
+          <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 border" to="/contact">
             CONTACT
           </NavLink>
         </div>

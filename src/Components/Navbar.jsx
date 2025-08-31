@@ -62,7 +62,7 @@ const Navbar = () => {
           src={assets.menu_icon}
           alt=""
           className="w-5 cursor-pointer sm:hidden "
-          onClick={() => setVisible(!visible)} // visibility toggle
+          onClick={() => setVisible(!visible)} //visibility toggle (true/false))
         />
       </div>
 
@@ -89,7 +89,8 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/"
           >
-            HOME
+            {' '}
+            HOME{' '}
           </NavLink>
           <NavLink
             onClick={() => {
@@ -98,7 +99,8 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/collection"
           >
-            COLLECTION
+            {' '}
+            COLLECTION{' '}
           </NavLink>
           <NavLink
             onClick={() => {
@@ -107,7 +109,8 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/about"
           >
-            ABOUT
+            {' '}
+            ABOUT{' '}
           </NavLink>
           <NavLink
             onClick={() => {
@@ -116,7 +119,8 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/contact"
           >
-            CONTACT
+            {' '}
+            CONTACT{' '}
           </NavLink>
         </div>
       </div>
